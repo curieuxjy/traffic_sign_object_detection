@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>106.jpg</filename>
+	<path>C:\Users\choi\object_detection_demo\data\images\106.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>133</xmin>
+			<ymin>145</ymin>
+			<xmax>549</xmax>
+			<ymax>480</ymax>
+		</bndbox>
+	</object>
+</annotation>

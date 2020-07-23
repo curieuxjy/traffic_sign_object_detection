@@ -7,10 +7,6 @@ def exist_file():
     if (filename.lower().endswith('.png') or filename.lower().endswith('.jpg') or filename.lower().endswith('.gif') or filename.lower().endswith('.bmp') or filename.lower().endswith('.pcx')):
         return True
 
-for filename in os.listdir('.'):
-    if exist_file():    
-        convert_gray()
-
 
 if __name__ == "__main__":
     import argparse

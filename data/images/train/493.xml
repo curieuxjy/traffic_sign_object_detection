@@ -1,7 +1,7 @@
 <annotation>
-	<folder>images</folder>
+	<folder>const_g1</folder>
 	<filename>493.jpg</filename>
-	<path>C:\Users\choi\object_detection_demo\data\images\493.jpg</path>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\const_g1\493.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>253</xmin>
-			<ymin>193</ymin>
-			<xmax>358</xmax>
-			<ymax>281</ymax>
+			<xmin>260</xmin>
+			<ymin>231</ymin>
+			<xmax>377</xmax>
+			<ymax>353</ymax>
 		</bndbox>
 	</object>
 </annotation>

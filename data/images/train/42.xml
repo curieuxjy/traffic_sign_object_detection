@@ -1,7 +1,7 @@
 <annotation>
-	<folder>images</folder>
+	<folder>bicycle_g1</folder>
 	<filename>42.jpg</filename>
-	<path>C:\Users\choi\object_detection_demo\data\images\42.jpg</path>
+	<path>D:\Dropbox\Dropbox\PostNomad\Vision\data\bicycle_g1\42.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -12,27 +12,15 @@
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>cross</name>
+		<name>bicycle</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>286</xmin>
-			<ymin>337</ymin>
-			<xmax>436</xmax>
-			<ymax>452</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>bump</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>268</xmin>
-			<ymin>246</ymin>
-			<xmax>430</xmax>
-			<ymax>291</ymax>
+			<xmin>143</xmin>
+			<ymin>189</ymin>
+			<xmax>599</xmax>
+			<ymax>501</ymax>
 		</bndbox>
 	</object>
 </annotation>

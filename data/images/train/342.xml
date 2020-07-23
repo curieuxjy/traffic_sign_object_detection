@@ -1,7 +1,7 @@
 <annotation>
-	<folder>images</folder>
+	<folder>child_g1</folder>
 	<filename>342.jpg</filename>
-	<path>C:\Users\choi\object_detection_demo\data\images\342.jpg</path>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\child_g1\342.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>106</xmin>
-			<ymin>245</ymin>
-			<xmax>207</xmax>
-			<ymax>305</ymax>
+			<xmin>440</xmin>
+			<ymin>274</ymin>
+			<xmax>650</xmax>
+			<ymax>454</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,34 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>257</xmin>
-			<ymin>237</ymin>
-			<xmax>343</xmax>
-			<ymax>332</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>bicycle</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>401</xmin>
-			<ymin>248</ymin>
-			<xmax>499</xmax>
-			<ymax>321</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>const</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>137</xmin>
-			<ymin>564</ymin>
-			<xmax>232</xmax>
-			<ymax>646</ymax>
+			<xmin>74</xmin>
+			<ymin>259</ymin>
+			<xmax>288</xmax>
+			<ymax>455</ymax>
 		</bndbox>
 	</object>
 </annotation>

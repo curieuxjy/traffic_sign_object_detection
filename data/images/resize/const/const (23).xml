@@ -1,0 +1,38 @@
+<annotation>
+	<folder>const</folder>
+	<filename>const (23).jpg</filename>
+	<path>C:\Users\LG\Desktop\pomad\data\resize\const\const (23).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>const</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>95</xmin>
+			<ymin>293</ymin>
+			<xmax>211</xmax>
+			<ymax>399</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>const</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>427</xmin>
+			<ymin>307</ymin>
+			<xmax>511</xmax>
+			<ymax>387</ymax>
+		</bndbox>
+	</object>
+</annotation>

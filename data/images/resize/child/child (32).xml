@@ -1,0 +1,38 @@
+<annotation>
+	<folder>child</folder>
+	<filename>child (32).jpg</filename>
+	<path>C:\Users\LG\Desktop\pomad\data\resize\child\child (32).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>child</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>451</xmin>
+			<ymin>265</ymin>
+			<xmax>653</xmax>
+			<ymax>467</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cross</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>83</xmin>
+			<ymin>257</ymin>
+			<xmax>273</xmax>
+			<ymax>447</ymax>
+		</bndbox>
+	</object>
+</annotation>

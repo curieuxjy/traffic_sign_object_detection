@@ -1,0 +1,26 @@
+<annotation>
+	<folder>bicycle</folder>
+	<filename>bicycle (52).jpg</filename>
+	<path>C:\Users\LG\Desktop\pomad\data\resize\bicycle\bicycle (52).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>207</xmin>
+			<ymin>301</ymin>
+			<xmax>507</xmax>
+			<ymax>601</ymax>
+		</bndbox>
+	</object>
+</annotation>

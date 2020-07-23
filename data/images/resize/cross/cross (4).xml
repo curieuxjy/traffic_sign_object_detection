@@ -1,0 +1,26 @@
+<annotation>
+	<folder>cross</folder>
+	<filename>cross (4).jpg</filename>
+	<path>C:\Users\LG\Desktop\pomad\data\resize\cross\cross (4).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cross</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>531</xmin>
+			<ymin>41</ymin>
+			<xmax>653</xmax>
+			<ymax>163</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>bicycle_g1</folder>
+	<filename>21.jpg</filename>
+	<path>D:\Dropbox\Dropbox\PostNomad\Vision\data\bicycle_g1\21.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>265</xmin>
+			<ymin>255</ymin>
+			<xmax>465</xmax>
+			<ymax>455</ymax>
+		</bndbox>
+	</object>
+</annotation>

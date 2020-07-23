@@ -1,0 +1,26 @@
+<annotation>
+	<folder>cross_g1</folder>
+	<filename>503.jpg</filename>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\cross_g1\503.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cross</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>271</xmin>
+			<ymin>188</ymin>
+			<xmax>472</xmax>
+			<ymax>462</ymax>
+		</bndbox>
+	</object>
+</annotation>

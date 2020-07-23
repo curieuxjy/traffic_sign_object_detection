@@ -1,0 +1,26 @@
+<annotation>
+	<folder>child_g1</folder>
+	<filename>352.jpg</filename>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\child_g1\352.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>child</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>328</xmin>
+			<ymin>218</ymin>
+			<xmax>450</xmax>
+			<ymax>358</ymax>
+		</bndbox>
+	</object>
+</annotation>

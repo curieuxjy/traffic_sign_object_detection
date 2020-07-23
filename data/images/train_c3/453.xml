@@ -1,0 +1,26 @@
+<annotation>
+	<folder>const_g1</folder>
+	<filename>453.jpg</filename>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\const_g1\453.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>const</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>215</xmin>
+			<ymin>141</ymin>
+			<xmax>381</xmax>
+			<ymax>310</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,7 +1,7 @@
 <annotation>
-	<folder>bump</folder>
+	<folder>test</folder>
 	<filename>bump (1).jpg</filename>
-	<path>C:\Users\LG\Desktop\pomad\data\resize\bump\bump (1).jpg</path>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\test\bump (1).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -18,9 +18,9 @@
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>221</xmin>
-			<ymin>431</ymin>
-			<xmax>505</xmax>
-			<ymax>517</ymax>
+			<ymin>437</ymin>
+			<xmax>501</xmax>
+			<ymax>509</ymax>
 		</bndbox>
 	</object>
 </annotation>

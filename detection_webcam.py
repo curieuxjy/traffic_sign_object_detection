@@ -7,6 +7,7 @@ import time
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
+
 PATH_TO_CKPT = "D:/GitHub/traffic_sign_object_detection/fine_tuned_model/frozen_inference_graph.pb"
 PATH_TO_LABELS = "D:/GitHub/traffic_sign_object_detection/data/annotations/label_map.pbtxt"
 
@@ -44,7 +45,7 @@ a_dict = {"bicycle": 1, "child":2, "const":3, "bump":2, "cross":4}
 while(True):
     temp_list = []
     while len(temp_list) < 5:
-        # start_1 = time.time() # 시작
+    # start_1 = time.time() # 시작
         ret, frame = video.read()
         print("------one-frame-------")
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -68,25 +69,25 @@ while(True):
             line_thickness=8,
             min_score_thresh=0.6
             )
-        # name:percentage
-        
-        disp_name = disp_name.split(":")[0]
-        print(disp_name)
-        # print("한 프레임 판단 시간: ", time.time()-start_1)
+            # name:percentage
+            
+            disp_name = disp_name.split(":")[0]
+            print(disp_name)
+            # print("한 프레임 판단 시간: ", time.time()-start_1)
 
-        print("change string to number")
-        num_result = 0
-        if disp_name == "bicycle":
-            num_result = a_dict["bicycle"]
-        elif disp_name == "child":
-            num_result = a_dict["child"]
-        elif disp_name == "const":
-            num_result = a_dict["const"]
-        elif disp_name == "bump":
-            num_result = a_dict["bump"]
-        elif disp_name == "cross":
-            num_result = a_dict["cross"]
-        temp_list.append(num_result)
+            print("change string to number")
+            num_result = 0
+            if disp_name == "bicycle":
+                num_result = a_dict["bicycle"]
+            elif disp_name == "child":
+                num_result = a_dict["child"]
+            elif disp_name == "const":
+                num_result = a_dict["const"]
+            elif disp_name == "bump":
+                num_result = a_dict["bump"]
+            elif disp_name == "cross":
+                num_result = a_dict["cross"]
+            temp_list.append(num_result)
 
     print(temp_list)
     num_1 = temp_list.count(1)
@@ -107,8 +108,10 @@ while(True):
     else:
         print("nothing! result will be 0")
 
-    with open("result.txt", "w") as f:
-        f.write(str(result))
+    str_result = str(result)
+
+    # with open("result.txt", "w") as f:
+    #     f.write(str(result))
 
     # time.sleep(5)
 

@@ -21,10 +21,10 @@ CWD_PATH = os.getcwd()
 
 # Path to frozen detection graph .pb file, which contains the model that is used
 # for object detection.
-PATH_TO_CKPT = "C:/tensorflow1/models/research/object_detection/frozen_inference_graph.pb"
+PATH_TO_CKPT = "D:/GitHub/traffic_sign_object_detection/fine_tuned_model/frozen_inference_graph.pb"
 
 # Path to label map file
-PATH_TO_LABELS = "C:/tensorflow1/models/research/object_detection/training/label_map.pbtxt"
+PATH_TO_LABELS = "D:/GitHub/traffic_sign_object_detection/data/annotations/label_map.pbtxt"
 
 # Number of classes the object detector can identify
 NUM_CLASSES = 5
@@ -69,18 +69,17 @@ num_detections = detection_graph.get_tensor_by_name('num_detections:0')
 
 # Initialize webcam feed
 video = cv2.VideoCapture(0)
-ret = video.set(3, 1080)
+ret = video.set(3,720)
 ret = video.set(4,720)
 
-a_dict = {"bicycle": 1, "child":2, "const":3, "bump":2, "cross":4} #child/bump 통합
-
+a_dict = {"bicycle": 1, "child":2, "const":3, "bump":2, "cross":4}
 while(True):
     temp_list = []
     while len(temp_list) < 5:
         # Acquire frame and expand frame dimensions to have shape: [1, None, None, 3]
         # i.e. a single-column array, where each item in the column has the pixel RGB value
         ret, frame = video.read()
-        time.
+        print("-----------------")
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         frame_expanded = np.expand_dims(frame_rgb, axis=0)
 
@@ -90,6 +89,7 @@ while(True):
             feed_dict={image_tensor: frame_expanded})
 
         # Draw the results of the detection (aka 'visulaize the results')
+        print("-----------------")
         disp_name = vis_util.visualize_boxes_and_labels_on_image_array(
             frame,
             np.squeeze(boxes),
@@ -105,6 +105,7 @@ while(True):
         print(disp_name)
 
         num_result = 0
+
         if disp_name == "bicycle":
             num_result = a_dict["bicycle"]
         elif disp_name == "child":
@@ -115,9 +116,11 @@ while(True):
             num_result = a_dict["bump"]
         elif disp_name == "cross":
             num_result = a_dict["cross"]
-
+            
+            # print(temp_list)
         temp_list.append(num_result)
-        # print(temp_list)
+
+    #----------------------------------------------------------
 
     print(temp_list)
     num_1 = temp_list.count(1)
@@ -125,6 +128,7 @@ while(True):
     num_3 = temp_list.count(3)
     num_4 = temp_list.count(4)
     num_5 = temp_list.count(5)
+
 
     result = 0
     if num_1 >= 3:
@@ -145,6 +149,8 @@ while(True):
 
     time.sleep(5)
 
+
+
     # All the results have been drawn on the frame, so it's time to display it.
     cv2.imshow('Object detector', frame)
 
@@ -155,3 +161,5 @@ while(True):
 # Clean up
 video.release()
 cv2.destroyAllWindows()
+
+

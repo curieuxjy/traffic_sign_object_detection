@@ -1,44 +1,21 @@
-# Import packages
 import os
 import cv2
 import numpy as np
 import tensorflow as tf
 import sys
 import time
-
-# This is needed since the notebook is stored in the object_detection folder.
-sys.path.append("..")
-
-# Import utilites
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
-# Name of the directory containing the object detection module we're using
-MODEL_NAME = 'inference_graph'
-
-# Grab path to current working directory
-CWD_PATH = os.getcwd()
-
-# Path to frozen detection graph .pb file, which contains the model that is used
-# for object detection.
 PATH_TO_CKPT = "D:/GitHub/traffic_sign_object_detection/fine_tuned_model/frozen_inference_graph.pb"
-
-# Path to label map file
 PATH_TO_LABELS = "D:/GitHub/traffic_sign_object_detection/data/annotations/label_map.pbtxt"
 
-# Number of classes the object detector can identify
 NUM_CLASSES = 5
 
-## Load the label map.
-# Label maps map indices to category names, so that when our convolution
-# network predicts `5`, we know that this corresponds to `king`.
-# Here we use internal utility functions, but anything that returns a
-# dictionary mapping integers to appropriate string labels would be fine
 label_map = label_map_util.load_labelmap(PATH_TO_LABELS)
 categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=NUM_CLASSES, use_display_name=True)
 category_index = label_map_util.create_category_index(categories)
 
-# Load the Tensorflow model into memory.
 detection_graph = tf.Graph()
 with detection_graph.as_default():
     od_graph_def = tf.GraphDef()
@@ -49,47 +26,38 @@ with detection_graph.as_default():
 
     sess = tf.Session(graph=detection_graph)
 
-
-# Define input and output tensors (i.e. data) for the object detection classifier
-
-# Input tensor is the image
 image_tensor = detection_graph.get_tensor_by_name('image_tensor:0')
-
-# Output tensors are the detection boxes, scores, and classes
-# Each box represents a part of the image where a particular object was detected
 detection_boxes = detection_graph.get_tensor_by_name('detection_boxes:0')
 
-# Each score represents level of confidence for each of the objects.
-# The score is shown on the result image, together with the class label.
 detection_scores = detection_graph.get_tensor_by_name('detection_scores:0')
 detection_classes = detection_graph.get_tensor_by_name('detection_classes:0')
 
-# Number of objects detected
 num_detections = detection_graph.get_tensor_by_name('num_detections:0')
 
 # Initialize webcam feed
-video = cv2.VideoCapture(0)
+video = cv2.VideoCapture(0) # 0:web_cam 1:logitech
 ret = video.set(3,720)
 ret = video.set(4,720)
 
 a_dict = {"bicycle": 1, "child":2, "const":3, "bump":2, "cross":4}
+
 while(True):
     temp_list = []
     while len(temp_list) < 5:
-        # Acquire frame and expand frame dimensions to have shape: [1, None, None, 3]
-        # i.e. a single-column array, where each item in the column has the pixel RGB value
+        # start_1 = time.time() # 시작
         ret, frame = video.read()
-        print("-----------------")
+        print("------one-frame-------")
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         frame_expanded = np.expand_dims(frame_rgb, axis=0)
 
         # Perform the actual detection by running the model with the image as input
+        # start_2 = time.time()
         (boxes, scores, classes, num) = sess.run(
             [detection_boxes, detection_scores, detection_classes, num_detections],
             feed_dict={image_tensor: frame_expanded})
-
-        # Draw the results of the detection (aka 'visulaize the results')
-        print("-----------------")
+        # print("sess.run 시간: ", time.time()-start_2)
+        print("-------display-visulalization-start-----")
+        
         disp_name = vis_util.visualize_boxes_and_labels_on_image_array(
             frame,
             np.squeeze(boxes),
@@ -98,14 +66,16 @@ while(True):
             category_index,
             use_normalized_coordinates=True,
             line_thickness=8,
-            min_score_thresh=0.5
+            min_score_thresh=0.6
             )
-        print(disp_name) #debugging
+        # name:percentage
+        
         disp_name = disp_name.split(":")[0]
         print(disp_name)
+        # print("한 프레임 판단 시간: ", time.time()-start_1)
 
+        print("change string to number")
         num_result = 0
-
         if disp_name == "bicycle":
             num_result = a_dict["bicycle"]
         elif disp_name == "child":
@@ -116,19 +86,14 @@ while(True):
             num_result = a_dict["bump"]
         elif disp_name == "cross":
             num_result = a_dict["cross"]
-            
-            # print(temp_list)
         temp_list.append(num_result)
-
-    #----------------------------------------------------------
 
     print(temp_list)
     num_1 = temp_list.count(1)
     num_2 = temp_list.count(2)
     num_3 = temp_list.count(3)
     num_4 = temp_list.count(4)
-    num_5 = temp_list.count(5)
-
+    # num_5 = temp_list.count(5)
 
     result = 0
     if num_1 >= 3:
@@ -139,27 +104,20 @@ while(True):
         result = 3
     elif num_4 >= 3:
         result = 4
-    elif num_5 >= 3:
-        result = 5
     else:
         print("nothing! result will be 0")
 
-    with open("testtest2.txt", "w") as f:
+    with open("result.txt", "w") as f:
         f.write(str(result))
 
-    time.sleep(5)
-
-
+    # time.sleep(5)
 
     # All the results have been drawn on the frame, so it's time to display it.
-    cv2.imshow('Object detector', frame)
+    # cv2.imshow('Object detector', frame)
 
     # Press 'q' to quit
     if cv2.waitKey(1) == ord('q'):
         break
 
-# Clean up
 video.release()
 cv2.destroyAllWindows()
-
-

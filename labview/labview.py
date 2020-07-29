@@ -121,10 +121,11 @@ def start():
 
         # # Press 'q' to quit
         # if cv2.waitKey(1) == ord('q'):
+        disp_result = a_dict["disp_name"]
 
         if disp_name!=False:
             break
 
     # video.release()
     # cv2.destroyAllWindows()
-    return disp_name
+    return disp_result

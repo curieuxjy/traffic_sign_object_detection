@@ -7,13 +7,8 @@ import time
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
-def camera():
-# Initialize webcam feed
-    video = cv2.VideoCapture(0) # 0:web_cam 1:logitech
-    ret = video.set(3,720)
-    ret = video.set(4,720)
-    return video
-
+# function 1 call 1 result
+# everytime call the camera
 def start(video):
     
     PATH_TO_CKPT = "D:/GitHub/traffic_sign_object_detection/fine_tuned_model/ssd_1st/frozen_inference_graph.pb"
@@ -26,7 +21,7 @@ def start(video):
     category_index = label_map_util.create_category_index(categories)
 
     detection_graph = tf.Graph()
-    #print("----------------1---------------")
+    
     with detection_graph.as_default():
         od_graph_def = tf.GraphDef()
         with tf.gfile.GFile(PATH_TO_CKPT, 'rb') as fid:
@@ -38,11 +33,13 @@ def start(video):
 
     image_tensor = detection_graph.get_tensor_by_name('image_tensor:0')
     detection_boxes = detection_graph.get_tensor_by_name('detection_boxes:0')
-
     detection_scores = detection_graph.get_tensor_by_name('detection_scores:0')
     detection_classes = detection_graph.get_tensor_by_name('detection_classes:0')
-
     num_detections = detection_graph.get_tensor_by_name('num_detections:0')
+
+    video = cv2.VideoCapture(0) # 0:web_cam 1:logitech
+    ret = video.set(3,720)
+    ret = video.set(4,720)
 
     a_dict = {"bicycle": 1, "child":2, "const":3, "bump":2, "cross":4, "":0}
 
@@ -67,13 +64,9 @@ def start(video):
             line_thickness=8,
             min_score_thresh=0.6
             )
-            # name:percentage
-        
-        # print("1st: ", disp_name)
-        # if disp_name == False:
-        #     continue
+       
         disp_name = disp_name.split(":")[0]
-        # print("2nd: ", disp_name)
+       
         result = a_dict[disp_name]
         result_list.append(result)
 

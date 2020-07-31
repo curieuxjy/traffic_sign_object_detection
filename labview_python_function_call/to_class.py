@@ -98,9 +98,9 @@ class Start():
 # camera 연결은 1번
 # 프레임 capture~inference 는 계속
 def start():
-    TestClass = Start()
-    TestClass.camera_start()
-    result = TestClass.inference()
+    TestClass = Start() #object 생성
+    TestClass.camera_start() #camera open
+    result = TestClass.inference() #inferencing
     print(result)
     return result
 

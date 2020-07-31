@@ -18,6 +18,11 @@
 | | | | | | | | |
 | | | | | | | | |
 
+# problem 
+* [이미지 처리](https://github.com/ethereon/lycon)
+* [CPU, RAM 사용 확인](https://frhyme.github.io/python/python_check_memory_usage/)
+* [Tensorflow Lite](https://www.tensorflow.org/lite/guide/inference?hl=ko#load_and_run_a_model_in_python)
+
 
 ## Reference
 * [1st repo](https://github.com/Tony607/object_detection_demo)
@@ -26,3 +31,4 @@
 
 * [2nd repo](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)
   * [youtube video](https://youtu.be/Rgpfk6eYxJA)
+* [opencv set reference](https://docs.opencv.org/2.4/modules/highgui/doc/reading_and_writing_images_and_video.html)

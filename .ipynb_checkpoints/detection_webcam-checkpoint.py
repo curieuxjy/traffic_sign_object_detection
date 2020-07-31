@@ -108,7 +108,17 @@ while(True):
 
     str_result = str(result)
 
-   
+    # with open("result.txt", "w") as f:
+    #     f.write(str(result))
+
+    # time.sleep(5)
+
+    # All the results have been drawn on the frame, so it's time to display it.
+    # cv2.imshow('Object detector', frame)
+
+    # Press 'q' to quit
+#     if cv2.waitKey(1) == ord('q'):
+#         break
 
 video.release()
 cv2.destroyAllWindows()

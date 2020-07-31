@@ -4,11 +4,17 @@ import numpy as np
 import tensorflow as tf
 import sys
 import time
+import socket
+
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
+# socket 만들기
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock.connect(("192.168.99.1", 9999)) 
+#ip 주소, port 번호(사용중인 번호만 아니면 모든 int 가능)
 
-PATH_TO_CKPT = "D:/GitHub/traffic_sign_object_detection/fine_tuned_model/ssd_1st/frozen_inference_graph.pb"
+PATH_TO_CKPT = "D:/GitHub/traffic_sign_object_detection/fine_tuned_model/frozen_inference_graph.pb"
 PATH_TO_LABELS = "D:/GitHub/traffic_sign_object_detection/data/annotations/label_map.pbtxt"
 
 NUM_CLASSES = 5
@@ -29,8 +35,10 @@ with detection_graph.as_default():
 
 image_tensor = detection_graph.get_tensor_by_name('image_tensor:0')
 detection_boxes = detection_graph.get_tensor_by_name('detection_boxes:0')
+
 detection_scores = detection_graph.get_tensor_by_name('detection_scores:0')
 detection_classes = detection_graph.get_tensor_by_name('detection_classes:0')
+
 num_detections = detection_graph.get_tensor_by_name('num_detections:0')
 
 # Initialize webcam feed
@@ -38,7 +46,7 @@ video = cv2.VideoCapture(0) # 0:web_cam 1:logitech
 ret = video.set(3,720)
 ret = video.set(4,720)
 
-a_dict = {"bicycle": 1, "child":2, "const":3, "bump":2, "cross":4, "":0}
+a_dict = {"bicycle": 1, "child":2, "const":3, "bump":2, "cross":4}
 
 while(True):
     temp_list = []
@@ -69,23 +77,23 @@ while(True):
             )
             # name:percentage
             
-        disp_name = disp_name.split(":")[0]
-        print(disp_name)
-        # print("한 프레임 판단 시간: ", time.time()-start_1)
+            disp_name = disp_name.split(":")[0]
+            print(disp_name)
+            # print("한 프레임 판단 시간: ", time.time()-start_1)
 
-        print("change string to number")
-        num_result = 0
-        if disp_name == "bicycle":
-            num_result = a_dict["bicycle"]
-        elif disp_name == "child":
-            num_result = a_dict["child"]
-        elif disp_name == "const":
-            num_result = a_dict["const"]
-        elif disp_name == "bump":
-            num_result = a_dict["bump"]
-        elif disp_name == "cross":
-            num_result = a_dict["cross"]
-        temp_list.append(num_result)
+            print("change string to number")
+            num_result = 0
+            if disp_name == "bicycle":
+                num_result = a_dict["bicycle"]
+            elif disp_name == "child":
+                num_result = a_dict["child"]
+            elif disp_name == "const":
+                num_result = a_dict["const"]
+            elif disp_name == "bump":
+                num_result = a_dict["bump"]
+            elif disp_name == "cross":
+                num_result = a_dict["cross"]
+            temp_list.append(num_result)
 
     print(temp_list)
     num_1 = temp_list.count(1)
@@ -108,7 +116,13 @@ while(True):
 
     str_result = str(result)
 
-   
+    sock.send(str_result.encode())
+
+
+
+    # Press 'q' to quit
+    if cv2.waitKey(1) == ord('q'):
+        break
 
 video.release()
 cv2.destroyAllWindows()

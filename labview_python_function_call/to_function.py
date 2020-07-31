@@ -9,7 +9,7 @@ from object_detection.utils import visualization_utils as vis_util
 
 # function 1 call 1 result
 # everytime call the camera
-def start(video):
+def start():
     
     PATH_TO_CKPT = "D:/GitHub/traffic_sign_object_detection/fine_tuned_model/ssd_1st/frozen_inference_graph.pb"
     PATH_TO_LABELS = "D:/GitHub/traffic_sign_object_detection/data/annotations/label_map.pbtxt"
@@ -85,8 +85,9 @@ def start(video):
     elif num_4 >= 3:
         return_last = 4
 
-    #return_last = str(return_last)
-    # print("return_last: ", return_last)
+    # if you want to change to string
+    # activate this code
+    # return_last = str(return_last)
 
     return return_last
 

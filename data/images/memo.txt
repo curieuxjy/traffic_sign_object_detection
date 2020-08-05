@@ -10,6 +10,10 @@ bump 73
 child 149
 const 85
 cross 78
+right 70
+left 70
+parking 70
+inter 70
 
 -----------------------------------------
 test/train=1:4
@@ -18,7 +22,8 @@ bump 73 = 15/
 child 149 = 30/
 const 85 = 17/
 cross 78 = 16/
+right/left/parking/inter/bus = 14/
 -----------------------------------------
 ----------xml 포함 파일 수------------
-train=916
-test=232
+train=1476
+test=372

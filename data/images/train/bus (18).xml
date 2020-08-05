@@ -1,0 +1,26 @@
+<annotation>
+	<folder>bus</folder>
+	<filename>bus (18).jpg</filename>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\bus\bus (18).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bus</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>413</xmin>
+			<ymin>190</ymin>
+			<xmax>471</xmax>
+			<ymax>245</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>left</folder>
+	<filename>left (31).jpg</filename>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\left\left (31).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>left</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>462</xmin>
+			<ymin>74</ymin>
+			<xmax>573</xmax>
+			<ymax>273</ymax>
+		</bndbox>
+	</object>
+</annotation>

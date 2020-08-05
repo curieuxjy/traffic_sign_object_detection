@@ -1,7 +1,7 @@
 <annotation>
-	<folder>train</folder>
+	<folder>cross</folder>
 	<filename>cross (24).jpg</filename>
-	<path>D:\GitHub\traffic_sign_object_detection\data\images\train\cross (24).jpg</path>
+	<path>C:\Users\LG\Desktop\pomad\data\resize\cross\cross (24).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -19,8 +19,8 @@
 		<bndbox>
 			<xmin>281</xmin>
 			<ymin>99</ymin>
-			<xmax>421</xmax>
-			<ymax>273</ymax>
+			<xmax>431</xmax>
+			<ymax>249</ymax>
 		</bndbox>
 	</object>
 </annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>right</folder>
+	<filename>right (49).jpg</filename>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\right\right (49).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>right</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>365</xmin>
+			<ymin>159</ymin>
+			<xmax>427</xmax>
+			<ymax>296</ymax>
+		</bndbox>
+	</object>
+</annotation>

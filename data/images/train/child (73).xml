@@ -1,7 +1,7 @@
 <annotation>
-	<folder>train</folder>
+	<folder>child</folder>
 	<filename>child (73).jpg</filename>
-	<path>D:\GitHub\traffic_sign_object_detection\data\images\train\child (73).jpg</path>
+	<path>C:\Users\LG\Desktop\pomad\data\resize\child\child (73).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>77</xmin>
-			<ymin>282</ymin>
-			<xmax>150</xmax>
-			<ymax>383</ymax>
+			<xmin>51</xmin>
+			<ymin>257</ymin>
+			<xmax>195</xmax>
+			<ymax>401</ymax>
 		</bndbox>
 	</object>
 </annotation>

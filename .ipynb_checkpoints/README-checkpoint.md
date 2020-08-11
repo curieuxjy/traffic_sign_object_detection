@@ -77,4 +77,30 @@
         [7,1] element, prob = 0.943107    (0,80)-(246,720) batch id : 0 WILL BE PRINTED!
         [8,1] element, prob = 0.942482    (0,317)-(310,676) batch id : 0 WILL BE PRINTED!
         ```
+        
+        Options
+        ```
+        usage: object_detection_sample_ssd.py [-h] -m MODEL -i INPUT [INPUT ...]
+                                      [-l CPU_EXTENSION] [-d DEVICE]
+                                      [--labels LABELS] [-nt NUMBER_TOP]
+
+        Options:
+          -h, --help            Show this help message and exit.
+          -m MODEL, --model MODEL
+                                Required. Path to an .xml file with a trained model.
+          -i INPUT [INPUT ...], --input INPUT [INPUT ...]
+                                Required. Path to image file.
+          -l CPU_EXTENSION, --cpu_extension CPU_EXTENSION
+                                Optional. Required for CPU custom layers. Absolute
+                                path to a shared library with the kernels
+                                implementations.
+          -d DEVICE, --device DEVICE
+                                Optional. Specify the target device to infer on; CPU,
+                                GPU, FPGA or MYRIAD is acceptable. Sample will look
+                                for a suitable plugin for device specified (CPU by
+                                default)
+          --labels LABELS       Optional. Labels mapping file
+          -nt NUMBER_TOP, --number_top NUMBER_TOP
+                                Optional. Number of top results
+        ```
 3. Send the results by UDP communication to LabView

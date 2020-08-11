@@ -2,9 +2,9 @@
 ## Example to benchmark SSD mobileNet V2 on Neural Compute stick.
 ```
 python openvino_inference_benchmark.py\
-     --model-dir ./models/ssd_mobilenet_v2_custom_trained/FP16\
-     --device MYRIAD\
-     --img ../test/15.jpg
+     --model-dir ./openvino\
+     --device CPU\
+     --img ./test/15.jpg
 ```
 """
 
@@ -15,35 +15,6 @@ import glob
 import platform
 from PIL import Image
 import numpy as np
-
-# Check path like C:\Intel\computer_vision_sdk\python\python3.5 or ~/intel/computer_vision_sdk/python/python3.5 exists in PYTHONPATH.
-is_win = "windows" in platform.platform().lower()
-""" 
-# OpenVINO 2018.
-if is_win:
-    message = "Please run `C:\\Intel\\computer_vision_sdk\\bin\\setupvars.bat` before running this."
-else:
-    message = "Add the following line to ~/.bashrc and re-run.\nsource ~/intel/computer_vision_sdk/bin/setupvars.sh"
-"""
-
-# OpenVINO 2019.
-if is_win:
-    message = 'Please run "C:\Program Files (x86)\IntelSWTools\openvino_2019.1.133\bin\setupvars.bat" before running this.'
-else:
-    message = "Add the following line to ~/.bashrc and re-run.\nsource /opt/intel/openvino/bin/setupvars.sh"
-
-try:
-    from openvino import inference_engine as ie
-    from openvino.inference_engine import IENetwork, IEPlugin
-except Exception as e:
-    exception_type = type(e).__name__
-    print(
-        "The following error happened while importing Python API module:\n[ {} ] {}".format(
-            exception_type, e
-        )
-    )
-    sys.exit(1)
-
 
 def pre_process_image(imagePath, img_shape):
     """pre process an image from image path.
@@ -75,10 +46,8 @@ def pre_process_image(imagePath, img_shape):
 if __name__ == "__main__":
     import argparse
 
-    # python argparse_test.py 5 -v --color RED
     parser = argparse.ArgumentParser(description="OpenVINO Inference speed benchmark.")
-    # parser.add_argument("-v", "--verbose", help="increase output verbosity",
-    #                     action="store_true")
+    
     parser.add_argument(
         "--model-dir",
         help="Directory where the OpenVINO IR .xml and .bin files exist.",
@@ -94,18 +63,12 @@ if __name__ == "__main__":
     output_dir = args.model_dir
     assert os.path.isdir(output_dir), "`{}` does not exist".format(output_dir)
 
-    # Devices: GPU (intel), CPU or MYRIAD
     plugin_device = args.device
     # Converted model take fixed size image as input,
     # we simply use same size for image width and height.
-    img_height = 300
+    img_height = 720
 
     DATA_TYPE_MAP = {"GPU": "FP16", "CPU": "FP32", "MYRIAD": "FP16"}
-    assert (
-        plugin_device in DATA_TYPE_MAP
-    ), "Unsupported device: `{}`, not found in `{}`".format(
-        plugin_device, list(DATA_TYPE_MAP.keys())
-    )
 
     # Path to a sample image to inference.
     img_fname = args.img

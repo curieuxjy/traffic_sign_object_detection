@@ -1,7 +1,7 @@
 <annotation>
-	<folder>parking</folder>
+	<folder>train</folder>
 	<filename>parking (23).jpg</filename>
-	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\parking\parking (23).jpg</path>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\train\parking (23).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -21,6 +21,18 @@
 			<ymin>119</ymin>
 			<xmax>650</xmax>
 			<ymax>398</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>106</xmin>
+			<ymin>126</ymin>
+			<xmax>384</xmax>
+			<ymax>385</ymax>
 		</bndbox>
 	</object>
 </annotation>

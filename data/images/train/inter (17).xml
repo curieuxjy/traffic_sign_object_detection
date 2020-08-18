@@ -1,7 +1,7 @@
 <annotation>
-	<folder>inter</folder>
+	<folder>train</folder>
 	<filename>inter (17).jpg</filename>
-	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\inter\inter (17).jpg</path>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\train\inter (17).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>155</xmin>
-			<ymin>177</ymin>
-			<xmax>341</xmax>
-			<ymax>419</ymax>
+			<xmin>150</xmin>
+			<ymin>188</ymin>
+			<xmax>336</xmax>
+			<ymax>430</ymax>
 		</bndbox>
 	</object>
 </annotation>

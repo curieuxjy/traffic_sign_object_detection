@@ -1,0 +1,26 @@
+<annotation>
+	<folder>add</folder>
+	<filename>add (40).JPG</filename>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\add\add (40).JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>260</xmin>
+			<ymin>319</ymin>
+			<xmax>486</xmax>
+			<ymax>446</ymax>
+		</bndbox>
+	</object>
+</annotation>

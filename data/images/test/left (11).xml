@@ -1,7 +1,7 @@
 <annotation>
-	<folder>left</folder>
+	<folder>test</folder>
 	<filename>left (11).jpg</filename>
-	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\left\left (11).jpg</path>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\test\left (11).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,9 +17,9 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>106</xmin>
-			<ymin>118</ymin>
-			<xmax>565</xmax>
+			<xmin>110</xmin>
+			<ymin>124</ymin>
+			<xmax>547</xmax>
 			<ymax>561</ymax>
 		</bndbox>
 	</object>

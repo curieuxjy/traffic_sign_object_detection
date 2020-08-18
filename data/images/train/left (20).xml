@@ -1,7 +1,7 @@
 <annotation>
-	<folder>left</folder>
+	<folder>train</folder>
 	<filename>left (20).jpg</filename>
-	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\left\left (20).jpg</path>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\train\left (20).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -11,18 +11,6 @@
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
-	<object>
-		<name>left</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>489</xmin>
-			<ymin>250</ymin>
-			<xmax>638</xmax>
-			<ymax>462</ymax>
-		</bndbox>
-	</object>
 	<object>
 		<name>right</name>
 		<pose>Unspecified</pose>

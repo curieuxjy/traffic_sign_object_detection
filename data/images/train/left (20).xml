@@ -1,7 +1,7 @@
 <annotation>
 	<folder>train</folder>
 	<filename>left (20).jpg</filename>
-	<path>D:\GitHub\traffic_sign_object_detection\data\images\train\left (20).jpg</path>
+	<path>D:/GitHub/traffic_sign_object_detection/data/images/train/left (20).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -12,15 +12,15 @@
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>right</name>
+		<name>left</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>86</xmin>
-			<ymin>237</ymin>
-			<xmax>243</xmax>
-			<ymax>445</ymax>
+			<xmin>479</xmin>
+			<ymin>250</ymin>
+			<xmax>636</xmax>
+			<ymax>458</ymax>
 		</bndbox>
 	</object>
 </annotation>

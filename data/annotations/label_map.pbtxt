@@ -42,8 +42,3 @@ item {
     id: 9
     name: 'parking'
 }
-
-item {
-    id: 10
-    name: 'right'
-}

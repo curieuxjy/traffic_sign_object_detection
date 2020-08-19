@@ -1,7 +1,7 @@
 <annotation>
-	<folder>add</folder>
+	<folder>train</folder>
 	<filename>add (28).jpg</filename>
-	<path>D:\GitHub\traffic_sign_object_detection\data\images\add\add (28).jpg</path>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\train\add (28).jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -12,7 +12,7 @@
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>park</name>
+		<name>parking</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>

@@ -1,0 +1,38 @@
+<annotation>
+	<folder>add2</folder>
+	<filename>add2 (31).jpg</filename>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\add2\add2 (31).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>const</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>298</xmin>
+			<ymin>253</ymin>
+			<xmax>390</xmax>
+			<ymax>324</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>inter</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>429</xmin>
+			<ymin>312</ymin>
+			<xmax>521</xmax>
+			<ymax>395</ymax>
+		</bndbox>
+	</object>
+</annotation>

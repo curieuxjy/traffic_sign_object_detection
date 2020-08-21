@@ -11,13 +11,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--raw-dir",
         help="Directory path to raw images.",
-        default="./add",
+        default="./add2",
         type=str,
     )
     parser.add_argument(
         "--save-dir",
         help="Directory path to save resized images.",
-        default="./add",
+        default="./add2",
         type=str,
     )
     # parser.add_argument(

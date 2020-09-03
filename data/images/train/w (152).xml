@@ -1,0 +1,26 @@
+<annotation>
+	<folder>work</folder>
+	<filename>w (152).jpg</filename>
+	<path>C:\Users\LG\Desktop\work\w (152).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>parking</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>543</xmin>
+			<ymin>341</ymin>
+			<xmax>571</xmax>
+			<ymax>378</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>work</folder>
+	<filename>w (38).jpg</filename>
+	<path>C:\Users\LG\Desktop\work\w (38).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>371</xmin>
+			<ymin>276</ymin>
+			<xmax>453</xmax>
+			<ymax>353</ymax>
+		</bndbox>
+	</object>
+</annotation>

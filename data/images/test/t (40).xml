@@ -1,0 +1,26 @@
+<annotation>
+	<folder>work</folder>
+	<filename>t (40).jpg</filename>
+	<path>C:\Users\LG\Desktop\work\t (40).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>left</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>421</xmin>
+			<ymin>296</ymin>
+			<xmax>446</xmax>
+			<ymax>318</ymax>
+		</bndbox>
+	</object>
+</annotation>

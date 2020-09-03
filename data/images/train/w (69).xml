@@ -1,0 +1,38 @@
+<annotation>
+	<folder>work</folder>
+	<filename>w (69).jpg</filename>
+	<path>C:\Users\LG\Desktop\work\w (69).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>const</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>680</xmin>
+			<ymin>244</ymin>
+			<xmax>720</xmax>
+			<ymax>288</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>420</xmin>
+			<ymin>214</ymin>
+			<xmax>629</xmax>
+			<ymax>384</ymax>
+		</bndbox>
+	</object>
+</annotation>

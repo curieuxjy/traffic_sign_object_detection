@@ -1,0 +1,26 @@
+<annotation>
+	<folder>inter</folder>
+	<filename>inter (56).jpg</filename>
+	<path>C:\Users\choi\Dropbox\PostNomad\Vision\data\resize\inter\inter (56).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>inter</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>325</xmin>
+			<ymin>226</ymin>
+			<xmax>498</xmax>
+			<ymax>493</ymax>
+		</bndbox>
+	</object>
+</annotation>

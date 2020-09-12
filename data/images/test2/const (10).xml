@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>const (10).jpg</filename>
+	<path>D:\GitHub\traffic_sign_object_detection\data\images\test\const (10).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>const</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>161</xmin>
+			<ymin>303</ymin>
+			<xmax>226</xmax>
+			<ymax>374</ymax>
+		</bndbox>
+	</object>
+</annotation>

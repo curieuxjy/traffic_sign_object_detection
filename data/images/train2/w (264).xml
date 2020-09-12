@@ -1,0 +1,26 @@
+<annotation>
+	<folder>work</folder>
+	<filename>w (264).jpg</filename>
+	<path>C:\Users\LG\Desktop\work\w (264).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bicycle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>188</xmin>
+			<ymin>69</ymin>
+			<xmax>509</xmax>
+			<ymax>376</ymax>
+		</bndbox>
+	</object>
+</annotation>

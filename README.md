@@ -39,6 +39,7 @@
 * [CPU, RAM check code](https://frhyme.github.io/python/python_check_memory_usage/)
 * [OpenVino Model Optimizer](https://docs.openvinotoolkit.org/latest/openvino_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html)
 * [Converting a TensorFlow* Model](https://docs.openvinotoolkit.org/latest/openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_TensorFlow.html#supported_topologies)
+* [Good quality image dataset](https://medium.com/@selectstar.ai/creating-the-best-quality-image-dataset-720f612944ed)
 
 
 ## Code Explanation along the process
